@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Trivia Game</title>
+     <!-- AngularJS -->
+    <script src="../../js/angular.min.js"></script>
+    <!-- Firebase -->
+    <script src="../../js/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="../../js/angularfire.min.js"></script>
+
+    <script src="../../js/index.js"></script>
+
+    <link href="trivia/trivia.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="trivia/trivia.js"></script>
+    <script>
+        function btnDisplay(){
+    document.getElementById("sbtn").disabled = false;
+        }
+    </script>
+</head>
+<body onload="btnDisplay();">
+<img src="../../images/logo.png" alt="The Waiting Game">
+ <div class="gradient-box" ng-app="myApp" ng-controller="myCtrl">
+<div id="trivia">
+ <div id="tcateg">Trivia Category:</div>
+ <div id="quiz"><h3>BP Trivia</h3><strong>Levels:</strong><ul><li>Level 1 - Easy - A list of answers is displayed for each question. Click the correct answer.</li><li>Level 2 - Difficult - A text box is displayed in which you must write the answer, then click on Send button.</li></ul><strong>Mode</strong><ul><li>Consecutive - The questions start from the quiz with index number added into a text field, and are added in their order till the last question.</li><li>Random - The questions are choosed randomly, without repeat.</li></ul>&bull; <strong>Countdown Timer</strong> - If that button is checked, you have 15 seconds to answer till the next question is shown.<br/><br/> - Click the Start button to start the quizzes. The Reset button resets the Trivia.<div id="tfrom"></div></div>
+ <div id="answered">
+  <h4>Quizzes: <em id="nqansw">0</em> of <span id="ntotalq"></span></h4>
+  <span id="nca">0</span> - Correct answers<br/>
+  <span id="nia">0</span> - Incorrect answers
+     <button  class="btn" id="sbtn" ng-click="addPoints()">Submit Score</button>
+ </div>
+ <div id="qdata">
+  <label for="level1"><input type="radio" name="level" id="level1" checked="checked" />Level 1</label><br>
+  <label for="level2"><input type="radio" name="level" id="level2" />Level 2</label>
+  <h4>Mode</h4>
+  <label for="qindex"><input type="radio" name="qmode" id="qindex" checked="checked" />Consecutive</label>
+  <div id="startqn">From <input type="text" size="1" name="nquiz" id="nquiz" value="1" /> to <span id="totalq"></span></div>
+  <label for="qrandom"><input type="radio" name="qmode" id="qrandom" />Random</label>
+  <label for="qctimer"><input type="checkbox" id="qctimer" />Countdown Timer</label><hr/>
+  <button class="btn" id="squiz">Start</button><br>
+  <button class="btn" id="treset" disabled="disabled">Reset</button>
+ </div>
+</div>
+<script type="text/javascript" src="trivia/trivia.js"></script>
+    </div>
+</body>
+</html>

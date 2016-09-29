@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Info Trivia Game Script</title>
+<style type="text/css">
+h2 {text-align:center;}
+pre {max-height:550px; margin:1em 8em 3em 3em; background:#fefeda; color:blue; font-weight:800; overflow:auto; padding:.5em .8em;}
+</style>
+</head>
+<body>
+<h2>Info Trivia Game Script</h2>
+A script for Trivia created with JavaScript. The quizzes (questions and answers) are stored in external files, in XML or JSON format.<br/>
+The Trivia Game has two levels: <b>Level 1</b> (Easy) displays a list of answers to each quiz, and the user must click on the correct answer; and <b>Level 2</b> is a little more difficult because it is displayed only a text box in which the user can write the answer.<br/>
+It has two modes: <b>Consecutive</b> - the quiestions start from the quiz with index number added into a text field, and are displayed in their order till the last quiz; and <b>Random</b> - the quizzes are choosed randomly, till the last quiz, without repeat.<br/>
+Also, the user can choose to play the trivia with a <b>Countdown Timer</b> (15 seconds to answer till the script adds automatically the next quiz).<br/>
+You can easily add quizzes and multiple categories in this Trivia, the quizzes of each category are stored in its external file.<br/>
+ - For test, see the "<b>trivia.html</b>", or online to this URL address: <a href="http://coursesweb.net/javascript/trivia-game-script_s2" title="JavaScript Trivia Game">http://coursesweb.net/javascript/trivia-game-script_s2</a>
+<h4>Instructions</h4>
+ 1. If you want to store the quizzes in XML file, create in the <b>trivia</b> directory a ".xml" file for each category, with this format (<i>see also in the "general.xml"</i>):
+<pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;trivia&gt;
+ &lt;quiz&gt;
+  &lt;que&gt;Text of the first question.&lt;/que&gt;
+  &lt;ca&gt;Correct answer&lt;/ca&gt;
+  &lt;ia&gt;Incorrect answer&lt;/ia&gt;
+  &lt;ia&gt;Other Incorrect answer&lt;/ia&gt;
+ &lt;/quiz&gt;
+ &lt;quiz&gt;
+  &lt;que&gt;Text of the second question.&lt;/que&gt;
+  &lt;ca&gt;Correct answer&lt;/ca&gt;
+  &lt;ia&gt;Incorrect answer&lt;/ia&gt;
+  &lt;ia&gt;Other Incorrect answer&lt;/ia&gt;
+  &lt;ia&gt;Another Incorrect answer&lt;/ia&gt;
+ &lt;/quiz&gt;
+ .....
+&lt;/trivia&gt;
+</pre>
+ - Then, in the <b>trivia.js</b> file (in "trivia/" directory) add in the <b>files_xml</b> object (line 338) elements with - <b>"Category_name":"File_name.xml"</b> for each category and the file associated to it.<br/><br/>
+ 2. If you want to use quizzes stored in JSON format, create in the <b>trivia</b> directory a file for each category, with this format (<i>see also in the "general_json.txt"</i>):
+<pre>
+[
+ {"que":"Text of the first question.", "ca":"Correct answer", "ia":["Incorrect answer", "Other Incorrect answer"]},
+ {"que":"Text of the second question.", "ca":"Correct answer", "ia":["Incorrect answer", "Other Incorrect answer", "Another Incorrect answer"]},
+ ....
+]
+</pre>
+ - Then, in the <b>trivia.js</b> file (in "trivia/" directory) add in the <b>files_json</b> object (line 347) elements with - <b>"Category_name":"File_name"</b> for each category and the file associated to it.<br/>
+ - Delete the line 341 (<i>obTrivia.setCateg(files_xml, 'xml');</i>), and the three slashes "///" added at the last line (350).
+<h4>Installing the script</h4>
+To include this trivia into a web page:<br/>
+ 1) Copy on your server the "<b>trivia</b>" directory (with al its files) in the same folder with the page in which you want to include the script.<br/>
+ 2) In the &lt;head&gt;&lt;/head&gt; zone of the page adds this code:
+<pre>
+&lt;link href=&quot;trivia/trivia.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+</pre>
+ 3) In the place you want to display the trivia, add this code:
+<pre>
+&lt;div id=&quot;trivia&quot;&gt;
+ &lt;div id=&quot;tcateg&quot;&gt;Trivia Category:&lt;/div&gt;
+ &lt;div id=&quot;quiz&quot;&gt;&lt;h3&gt;Welcome to Trivia Game&lt;/h3&gt;&lt;strong&gt;Levels:&lt;/strong&gt;
+ &lt;ul&gt;&lt;li&gt;Level 1 - Easy - It is displayed a list of answers to each quiz. Click the correct answer.&lt;/li&gt;
+ &lt;li&gt;Level 2 - Difficult - It is displayed a text box in which you must write the answer, then click on Send button.&lt;/li&gt;&lt;/ul&gt;
+ &lt;strong&gt;Mode&lt;/strong&gt;
+ &lt;ul&gt;&lt;li&gt;Consecutive - The quiestions start from the quiz with index number added into a text field, and are added in their order till the last quiz.&lt;/li&gt;
+ &lt;li&gt;Random - The quizzes are choosed randomly, till the last quiz, without repeat.&lt;/li&gt;&lt;/ul&gt;
+ &amp;bull; &lt;strong&gt;Countdown Timer&lt;/strong&gt; - If that button is checked, you have 15 seconds to answer till the next quiz is added automatically.&lt;br/&gt;&lt;br/&gt;
+ - Click the Start button to start the quizzes. The Reset button resets the Trivia.
+ &lt;div id=&quot;tfrom&quot;&gt;From: &lt;a href=&quot;http://coursesweb.net/&quot; title=&quot;Web Programming and Development Courses&quot;&gt;http://CoursesWeb.net&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+ &lt;div id=&quot;answered&quot;&gt;
+  &lt;h4&gt;Quizzes: &lt;em id=&quot;nqansw&quot;&gt;0&lt;/em&gt; of &lt;span id=&quot;ntotalq&quot;&gt;&lt;/span&gt;&lt;/h4&gt;
+  &lt;span id=&quot;nca&quot;&gt;0&lt;/span&gt; - Correct answers&lt;br/&gt;
+  &lt;span id=&quot;nia&quot;&gt;0&lt;/span&gt; - Incorrect answers
+ &lt;/div&gt;
+ &lt;div id=&quot;qdata&quot;&gt;
+  &lt;label for=&quot;level1&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;level&quot; id=&quot;level1&quot; checked=&quot;checked&quot; /&gt;Level 1&lt;/label&gt;
+  &lt;label for=&quot;level2&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;level&quot; id=&quot;level2&quot; /&gt;Level 2&lt;/label&gt;
+  &lt;h4&gt;Mode&lt;/h4&gt;
+  &lt;label for=&quot;qindex&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;qmode&quot; id=&quot;qindex&quot; checked=&quot;checked&quot; /&gt;Consecutive&lt;/label&gt;
+  &lt;div id=&quot;startqn&quot;&gt;From &lt;input type=&quot;text&quot; size=&quot;1&quot; name=&quot;nquiz&quot; id=&quot;nquiz&quot; value=&quot;1&quot; /&gt; to &lt;span id=&quot;totalq&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;label for=&quot;qrandom&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;qmode&quot; id=&quot;qrandom&quot; /&gt;Random&lt;/label&gt;
+  &lt;label for=&quot;qctimer&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;qctimer&quot; /&gt;Countdown Timer&lt;/label&gt;&lt;hr/&gt;
+  &lt;button id=&quot;squiz&quot;&gt;Start&lt;/button&gt;
+  &lt;button id=&quot;treset&quot; disabled=&quot;disabled&quot;&gt;Reset&lt;/button&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;trivia/trivia.js&quot;&gt;&lt;/script&gt;
+</pre>
+<h4>Oter info</h4>
+ - When the Trivia Game starts, the Start button is pressed, it is called the <b>sQuiz('start')</b> method.<br/>
+ - When the User chooses /sends an answer, it is called the <b>getAnswer()</b> method.<br/>
+ - When the User clicks the Next button for the next quiz (or the Countdown Time expired), it is called the <b>sQuiz('next')</b> method.<br/>
+ - When the Reset button is pressed, it is called the <b>resetTrivia()</b> method.<br/>
+ - When the User selects other categories, it is called the <b>setQuizXML()</b> method if Trivia quizzes are stored in ".xml" files, or, the <b>setQuizJSON()</b> method if Trivia quizzes are in JSON format.
+
+<br/><br/><br/>
+<center>Trivia Game from CoursesWeb.net<br/>Free JavaScript & jQuery Course, tutorials, and code snippets: <a href="http://coursesweb.net/javascript/" title="Free JavaScript & jQuery Course">http://coursesweb.net/javascript/</a></center><br/>
+</body>
+</html>

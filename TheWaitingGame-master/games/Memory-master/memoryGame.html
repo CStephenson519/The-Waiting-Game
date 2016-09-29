@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="A memory game, built for fun with HTML, CSS, and JavaScript.">
+  <meta name="author" content="Nick Salloum">
+
+  <!-- title -->
+  <title>Memory Game!</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab">
+  <link rel="stylesheet" href="css/memory.min.css">
+
+  <!-- og -->
+  <meta property="og:title" content="Memory Game!">
+  <meta property="og:url" content="http://callmenick.com/memory/">
+  <meta property="og:image" content="http://callmenick.com/memory/img/og-image.png">
+
+      <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <link rel="stylesheet" href="stylesheets/index.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script src="cordova.js"></script>
+        <script src="../../js/index.js"></script>
+  <!-- AngularJS -->
+    <script src="../../js/angular.min.js"></script>
+    <!-- Firebase -->
+    <script src="../../js/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="../../js/angularfire.min.js"></script>
+
+</head>
+<body>
+  <img src="../../images/logo.png" alt="The Waiting Game">
+  <div class="wrapper">
+
+    <div class="header clearfix">
+      <h1 class="header__title">Memory Game!</h1>
+    </div><!-- /.header -->
+
+    <div class="content">
+      <div class="container">
+
+        <div id="my-memory-game"></div>
+
+      </div>
+        <div ng-app="myApp" ng-controller="myCtrl">
+            <p id="pointsMsg" style="visibility:hidden"> You got <span id="nca"></span> points for completing the game</p>
+            <button id="sbtn" ng-click="addPoints()" 
+                    style="-moz-box-shadow: 0px 0px 0px 2px #9fb4f2;
+	-webkit-box-shadow: 0px 0px 0px 2px #9fb4f2;
+	box-shadow: 0px 0px 0px 2px #9fb4f2;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7892c2), color-stop(1, #476e9e));
+	background:-moz-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-webkit-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-o-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-ms-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7892c2', endColorstr='#476e9e',GradientType=0);
+	background-color:#7892c2;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Georgia;
+	font-size:15px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+	display: block;
+	margin-left:auto;
+	margin-right:auto;
+    text-align: center;
+    width:120px;">Submit Score</button>
+        </div>
+    </div><!-- /.content -->
+
+
+  </div><!-- /.wrapper -->
+
+  <!-- js -->
+  <script src="js/classList.min.js"></script>
+  <script src="js/memory.js"></script>
+
+  <!-- start memory! -->
+  <script>
+    (function(){
+      var myMem = new Memory({
+        wrapperID : "my-memory-game",
+        cards : [
+          {
+            id : 1,
+            img: "img/default/monsters-01-min.png"
+          },
+          {
+            id : 2,
+            img: "img/default/monsters-02-min.png"
+          },
+          {
+            id : 3,
+            img: "img/default/monsters-03-min.png"
+          },
+          {
+            id : 4,
+            img: "img/default/monsters-04-min.png"
+          },
+          {
+            id : 5,
+            img: "img/default/monsters-05-min.png"
+          },
+          {
+            id : 6,
+            img: "img/default/monsters-06-min.png"
+          },
+          {
+            id : 7,
+            img: "img/default/monsters-07-min.png"
+          },
+          {
+            id : 8,
+            img: "img/default/monsters-08-min.png"
+          },
+          {
+            id : 9,
+            img: "img/default/monsters-09-min.png"
+          },
+          {
+            id : 10,
+            img: "img/default/monsters-10-min.png"
+          },
+          {
+            id : 11,
+            img: "img/default/monsters-11-min.png"
+          },
+          {
+            id : 12,
+            img: "img/default/monsters-12-min.png"
+          },
+          {
+            id : 13,
+            img: "img/default/monsters-13-min.png"
+          },
+          {
+            id : 14,
+            img: "img/default/monsters-14-min.png"
+          },
+          {
+            id : 15,
+            img: "img/default/monsters-15-min.png"
+          },
+          {
+            id : 16,
+            img: "img/default/monsters-16-min.png"
+          }
+        ],
+        onGameStart : function() { return false; },
+        onGameEnd : function() { return false; }
+      });
+    })();
+  </script>
+
+
+
+  <div id="fb-root"></div>
+
+</body>
+</html>

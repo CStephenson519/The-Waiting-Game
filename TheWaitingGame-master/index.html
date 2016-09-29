@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheets/buttons.css"/>
+        <link rel="stylesheet" href="stylesheets/index.css"/>
+        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://*.firebaseio.com wss://*.firebaseio.com http://*.openstreetmap.org https://auth.firebase.com https://accounts.google.com  https://rippleapi.herokuapp.com data: gap: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" />
+        <!-- Cordova.js ... brings in plugin dependencies -->
+        <script src="cordova.js"></script>
+        <!-- AngularJS -->
+        <script src="js/angular.min.js"></script>
+
+        <!-- Firebase -->
+        <script src="js/firebase-debug.js"></script>
+
+        <!-- AngularFire -->
+        <script src="js/angularfire.min.js"></script>
+        <script src="js/index.js"></script>
+        <style>
+            .ng-hide{
+                display:none;
+            }
+
+            #logBtn{
+                display: block;
+                width: 100%;
+            }
+
+            #mainMenuDiv{
+                position: relative;
+                margin: 7%;
+        </style>
+    </head>
+
+    <body>
+        <embed src="audio/theme.mp3" autostart="true" loop="true" width="2" height="0"></embed>
+        <img src="images/logo.png" alt="The Waiting Game">
+        <div id="mainButton" ng-app = "myApp" ng-controller ="myCtrl" >
+            <form ng-hide="auth != null">
+                <button id="logBtn" ng-hide="google!=null" type ="submit" ng-click="login()" class="myButton">
+                    Google Sign-in</button> <br>
+                <button id="logBtn" ng-hide="facebook!=null" type ="submit" ng-click="loginFb()" class="myButton">
+                    Facebook Sign-in </button><br>
+            </form>
+            <form ng-hide="auth == null" id="mainMenuDiv">
+                <a href="myAccount.html"  class="myButton"> My Account </a><br>
+                <a href="games.html"  class="myButton"> Games </a><br>
+                <a href="foodMenu.html"  class="myButton"> Food Menu </a><br>
+                <a href="HelpPage.html"  class="myButton"> Help</a> <br>
+                <button id="logBtn" ng-click="logout()" class="myButton"> Logout</button>
+            </form>
+        </div>
+    </body>
+
+</html>

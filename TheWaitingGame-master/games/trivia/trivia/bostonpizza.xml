@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trivia>
+ <quiz>
+  <que>Boston Pizza was founded in _,_ in 1964</que>
+  <ca>Edmonton, Alberta</ca>
+  <ia>London, Ontario</ia>
+  <ia>Winnipeg, Manitoba</ia>
+  <ia>Boston, Massachusetts</ia>
+ </quiz>
+ <quiz>
+  <que>This popular 'Dragon's Den' star was one of the first franchisees of Boston Pizza</que>
+  <ca>Jim Treliving</ca>
+  <ia>Arlene Dickinson</ia>
+  <ia>Kevin O'Leary</ia>
+  <ia>Robert Herjavec</ia>
+ </quiz>
+ <quiz>
+  <que>In 1986, Boston Pizza became the official pizza supplier for __ in Vancouver</que>
+  <ca>Expo 86</ca>
+  <ia>World Youth Day</ia>
+  <ia>the Stanley Cup Finals</ia>
+  <ia>the BC Lions</ia>
+ </quiz>
+  <quiz>
+  <que>During the first round of the 2011 Stanley Cup Playoffs, Boston Pizza temporarily rebranded as</que>
+  <ca>Montreal Pizza</ca>
+  <ia>Toronto Pizza</ia>
+  <ia>Boston Sandwiches</ia>
+  <ia>Edmonton Pizza</ia>
+ </quiz>
+  <quiz>
+  <que>Boston Pizza currently boasts _ locations across Canada</que>
+  <ca>348</ca>
+  <ia>271</ia>
+  <ia>150</ia>
+  <ia>502</ia>
+ </quiz>
+   <quiz>
+       <que>Boston Pizza has franchises in the United States under the name "Boston's - The Gourmet Pizza"</que>
+       <ca>True</ca>
+       <ia>False</ia>
+    </quiz>
+</trivia>

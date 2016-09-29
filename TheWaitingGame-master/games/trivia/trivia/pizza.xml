@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trivia>
+ <quiz>
+  <que>The word "pizza" dates back over a thousand years, first mentioned in a Latin text written in which country?</que>
+  <ca>Italy</ca>
+  <ia>France</ia>
+  <ia>Greece</ia>
+  <ia>Switzerland</ia>
+ </quiz>
+ <quiz>
+  <que>The first frozen pizza hit the market in _?</que>
+  <ca>1962</ca>
+  <ia>1948</ia>
+  <ia>1997</ia>
+  <ia>1975</ia>
+ </quiz>
+ <quiz>
+  <que>Which american city is famous for it's "thick-crust" style pizza pie</que>
+  <ca>Chicago</ca>
+  <ia>Philadelphia</ia>
+  <ia>New York</ia>
+  <ia>Boston</ia>
+ </quiz>
+ <quiz>
+  <que>A research firm in the United States claims _ slices of pizza are eaten every second</que>
+  <ca>350</ca>
+  <ia>100</ia>
+  <ia>650</ia>
+  <ia>1000</ia>
+ </quiz>
+ <quiz>
+  <que>Since 1987, _ has been officially designated National Pizza Month in the United States </que>
+  <ca>October</ca>
+  <ia>November</ia>
+  <ia>September</ia>
+  <ia>December</ia>
+ </quiz>
+ <quiz>
+  <que>The most popular pizza topping is?</que>
+  <ca>Pepperoni</ca>
+  <ia>Sausage</ia>
+  <ia>Olives</ia>
+  <ia>Pineapple</ia>
+ </quiz>
+ <quiz>
+  <que>The most popular day for pizza delivery in the United States is?</que>
+  <ca>Super Bowl Sunday</ca>
+  <ia>Christmas Eve</ia>
+  <ia>Valentine's Day</ia>
+  <ia>Halloween</ia>
+ </quiz>
+ <quiz>
+  <que>Which of the following is not a major pizza chain in Canada?</que>
+  <ca>Pizza Planet</ca>
+  <ia>Pizza Pizza</ia>
+  <ia>Pizza Hut</ia>
+  <ia>Boston Pizza</ia>
+ </quiz>
+</trivia>

@@ -1,0 +1,264 @@
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+body {
+	 bakground: url(../images/background.jpg);
+background: linear-gradient(145deg, #80a1f2, #4a019d);
+background-size: 400% 400%;
+
+-webkit-animation: AnimationName 8s ease infinite;
+-moz-animation: AnimationName 8s ease infinite;
+animation: AnimationName 8s ease infinite;
+
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 15%}
+    50%{background-position:100% 86%}
+    100%{background-position:0% 15%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 15%}
+    50%{background-position:100% 86%}
+    100%{background-position:0% 15%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 15%}
+    50%{background-position:100% 86%}
+    100%{background-position:0% 15%}
+}
+
+.btn {
+	-moz-box-shadow: 0px 0px 0px 2px #9fb4f2;
+	-webkit-box-shadow: 0px 0px 0px 2px #9fb4f2;
+	box-shadow: 0px 0px 0px 2px #9fb4f2;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7892c2), color-stop(1, #476e9e));
+	background:-moz-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-webkit-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-o-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-ms-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7892c2', endColorstr='#476e9e',GradientType=0);
+	background-color:#7892c2;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Georgia;
+	font-size:15px;
+	clear:both;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+	display: block;
+	margin-left:auto;
+	margin-right:auto;
+    text-align: center;
+    width:80px;
+    
+}
+.btn:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #476e9e), color-stop(1, #7892c2));
+	background:-moz-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:-webkit-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:-o-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:-ms-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#476e9e', endColorstr='#7892c2',GradientType=0);
+	background-color:#476e9e;
+}
+.btn:active {
+	position:relative;
+	top:1px;
+}
+
+h4{
+    color:#C0C0C0;
+    text-shadow:#7a7a7a 1px 1px 0;
+    font-size: 20px;
+    text-align: left;
+    -webkit-text-stroke: .25px black;
+    padding: 0;
+}
+
+.gradient-box{
+    margin-left:auto;
+	margin-right:auto;
+	
+   width:85%;
+    background: #131313;
+    border: 10px solid transparent;
+    -moz-border-image: -moz-linear-gradient(top right, #FC913A 0%, #FF4E50 100%);
+    -webkit-border-image: -webkit-linear-gradient(top right, #FC913A 0%, #FF4E50 100%);
+    border-image: linear-gradient(to bottom left, #FC913A 0%, #FF4E50 100%);
+    border-image-slice: 1;
+ }
+
+#trivia {
+ width: 99%;
+    height: 100%;
+   
+    background: #bcdeef;
+    border: 1px solid blue;
+    padding: .1em;
+    font-family: "Calibri",sans-serif;
+}
+#trivia #tcateg {
+ margin:0 28% .2em 1em;
+ font-weight:800;
+}
+#trivia #quiz {
+ position:relative;
+ min-height:21em;
+/* margin:100%;*/
+ background:#fbfbfd;
+ -moz-border-radius:.8em;
+ -webkit-border-radius:.8em;
+ -khtml-border-radius:.8em;
+ border-radius:.8em;
+ padding:.3em;
+}
+#trivia #quiz h3 {
+ margin:.2em auto;
+ text-align:center;
+}
+#trivia #quiz #tquestion {
+ margin:2em .1em 1.5em .1em;
+}
+#trivia #quiz #sctimer {
+ position:absolute;
+ top:.3em;
+ right:.5em;
+ background:yellow;
+ border:1px dashed #00d001;
+ padding:0 .2em;
+ font-size:1.2em;
+ font-weight:800;
+ color:#00d001;
+}
+#trivia #quiz #qnr {
+ margin:0 2em 0 1.5em;
+ padding:0;
+ font-size:.9em;
+ font-style:italic;
+}
+
+#trivia #quiz #qansw {
+ margin:0 .1em;
+ background:#f4f5fe;
+ -moz-border-radius:.6em;
+ -webkit-border-radius:.6em;
+ -khtml-border-radius:.6em;
+ border-radius:.6em;
+ padding:.2em .4em;
+}
+#trivia #quiz .qanswer {
+ margin:.1em;
+ border:1px solid #333;
+ background-image: -ms-linear-gradient(top, #efeff0, #fbfbfb);     /* IE10 */
+ background-image:-moz-linear-gradient(top, #efeff0, #fbfbfb 95%);     /* Mozilla */
+ /* for Safari, Chrome */
+ background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #efeff0), color-stop(0.9, #fbfbfb));
+ background-image: -o-linear-gradient(top, #efeff0, #fbfbfb);          /* Opera 11.1+ */
+ background: linear-gradient(top, #efeff0, #fbfbfb);          /* W3C Markup */
+ -moz-border-radius:.3em;
+ -webkit-border-radius:.3em;
+ -khtml-border-radius:.3em;
+ border-radius:.3em;
+ padding:.1em;
+ font-size:1.05em;
+ cursor:pointer;
+}
+#trivia #quiz .qanswer:before {
+ content:'• '
+}
+#trivia #quiz .qanswer:hover {
+ margin:.1em;
+ border:1px solid green;
+ background:#dafbda;
+ background-image: -ms-linear-gradient(top, #fbfbfb, #dafbda);     /* IE10 */
+ background-image:-moz-linear-gradient(top, #fbfbfb, #dafbda 95%);     /* Mozilla */
+ /* for Safari, Chrome */
+ background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fbfbfb), color-stop(0.9, #dafbda));
+ background-image: -o-linear-gradient(top, #fbfbfb, #dafbda);          /* Opera 11.1+ */
+ background: linear-gradient(top, #fbfbfb, #dafbda);          /* W3C Markup */
+ -moz-border-radius:0;
+ -webkit-border-radius:0;
+ -khtml-border-radius:0;
+ border-radius:0;
+ font-size:1.05em;
+}
+#trivia #quiz #nextq {
+ display:block;
+ margin:1em auto 1em 30%;
+ cursor:pointer;
+}
+
+#trivia #answered {
+
+ top:.3em;
+ right:.1em;
+ width:100%;
+ height:8em;
+ background:#eeefef;
+ -moz-border-radius:.5em;
+ -webkit-border-radius:.5em;
+ -khtml-border-radius:.5em;
+ border-radius:.5em;
+ padding:.1em 0 .1em .1em;
+ font-size:.9em;
+}
+#trivia #answered h4 {
+ margin:.1em 0 0 1em;
+}
+#trivia #answered #ntotalq {
+ font-size:1.1em;
+ text-decoration:underline;
+}
+#trivia #answered #nqansw, #trivia #answered #nca, #trivia #quiz #canswer {
+ color:#0001fe;
+ font-weight:800;
+ font-size:1.1em;
+}
+#trivia #answered #nia, #trivia #quiz #iansw {
+ color:#fe0001;
+ font-weight:800;
+ font-size:1.1em;
+}
+#trivia #qdata {
+ top:7em;
+ right:.1em;
+ padding-bottom: 10px;
+ width:100%;
+ background:#fefeed;
+}
+#trivia #qdata h4 {
+ margin:.4em 1px 0 1px;
+ text-align:left;
+}
+#trivia #qdata label, #trivia #qdata button {
+ 
+ 
+ cursor:pointer;
+}
+#trivia #qdata #startqn {
+ margin:0 0 0 1em;
+ font-size:.85em;
+ color:#0001ed;
+}
+#trivia #qdata #nquiz {
+ width:2em;
+ height:.9em;
+ font-size:.85em;
+}
+#trivia #qdata button {
+
+ font-size:.85em;
+}
+

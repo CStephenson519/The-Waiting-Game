@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trivia>
+ <quiz>
+  <que>Boston is named after a town in what country?</que>
+  <ca>England</ca>
+  <ia>Ireland</ia>
+  <ia>Germany</ia>
+  <ia>France</ia>
+ </quiz>
+ <quiz>
+  <que>The MLB franchise of Boston are known as the _?</que>
+  <ca>Red Sox</ca>
+  <ia>Black Sox</ia>
+  <ia>Orioles</ia>
+  <ia>Yankees</ia>
+ </quiz>
+ <quiz>
+  <que>This popular baked good is named after a Boston suburb</que>
+  <ca>Fig Newton</ca>
+  <ia>Oreo</ia>
+  <ia>Cupcake</ia>
+  <ia>Jelly Roll</ia>
+ </quiz>
+ <quiz>
+  <que>At 90 feet below the surface, the Ted Williams Tunnel is the deepest in North America</que>
+  <ca>True</ca>
+  <ia>False</ia>
+ </quiz>
+ <quiz>
+  <que>Which of the following is a nickname for Boston</que>
+  <ca>Beantown</ca>
+  <ia>Steel City</ia>
+  <ia>Big Apple</ia>
+  <ia>City that never sleeps</ia>
+ </quiz>
+ <quiz>
+  <que>Boston is home to this college, the first established in North America</que>
+  <ca>Harvard</ca>
+  <ia>Yale</ia>
+  <ia>Princeton</ia>
+  <ia>Boston College</ia>
+ </quiz>
+</trivia>
